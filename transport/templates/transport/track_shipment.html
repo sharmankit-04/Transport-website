@@ -1,0 +1,63 @@
+{% extends 'transport/base.html' %}
+
+{% block title %}Track Your Shipment - Delhi Bombay Roadlines{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="text-center mb-4">Track Your Shipment</h2>
+  <p class="text-center">Enter your shipment ID below to track it.</p>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form method="post" novalidate class="card p-4 shadow-sm mb-4">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+          {{ form.tracking_number.label_tag }}
+          {{ form.tracking_number }}
+          {% if form.tracking_number.errors %}
+            <div class="text-danger small">{{ form.tracking_number.errors }}</div>
+          {% endif %}
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Track</button>
+      </form>
+
+      {% if shipment %}
+      <div class="card p-4 shadow-sm">
+        <h5>Shipment Details</h5>
+        <p><strong>Status:</strong> <span class="badge 
+          {% if shipment.status == 'Delivered' %}bg-success
+          {% elif shipment.status == 'In Transit' %}bg-info
+          {% elif shipment.status == 'Delayed' %}bg-warning
+          {% else %}bg-secondary{% endif %}">
+          {{ shipment.status }}
+        </span></p>
+        <p><strong>Origin:</strong> {{ shipment.origin }}</p>
+        <p><strong>Destination:</strong> {{ shipment.destination }}</p>
+        <p><strong>Last Updated:</strong> {{ shipment.last_updated|date:"M d, Y H:i" }}</p>
+
+        <div class="progress mt-3">
+          <div class="progress-bar 
+            {% if shipment.status == 'Delivered' %}bg-success
+            {% elif shipment.status == 'In Transit' %}bg-info
+            {% elif shipment.status == 'Delayed' %}bg-warning
+            {% else %}bg-secondary{% endif %}"
+            role="progressbar"
+            style="width: {% if shipment.status == 'Delivered' %}100
+                    {% elif shipment.status == 'In Transit' %}60
+                    {% elif shipment.status == 'Delayed' %}40
+                    {% else %}20{% endif %}%;">
+            {{ shipment.status }}
+          </div>
+        </div>
+
+        <!-- Optional: Add a map or timeline here in future -->
+      </div>
+      {% elif not form.is_bound %}
+        <div class="alert alert-info mt-3">Awaiting input...</div>
+      {% elif not shipment %}
+        <div class="alert alert-danger mt-3">No shipment found for this tracking number.</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

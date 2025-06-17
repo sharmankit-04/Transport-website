@@ -1,0 +1,62 @@
+{% extends "transport/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold text-primary">About Delhi Bombay Roadlines</h1>
+    <p class="lead text-muted">Reliable | Efficient | Nationwide Transport Solutions</p>
+  </div>
+
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+        <img src="https://images.unsplash.com/photo-1602751585071-d4bbfa2cf9f3?auto=format&fit=crop&w=1350&q=80" 
+     alt="About Us" 
+     class="img-fluid rounded-4 shadow-sm">
+
+    </div>
+    <div class="col-md-6">
+      <h3 class="fw-bold mb-3 text-dark">Who We Are</h3>
+      <p>
+        <strong>Delhi Bombay Roadlines</strong> is a trusted name in the logistics industry, specializing in long-distance freight services across India. 
+        We boast a robust fleet, professional drivers, and a commitment to excellence.
+      </p>
+      <p>
+        Our operations are built on transparency, timeliness, and technology—delivering peace of mind with every consignment.
+      </p>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="p-4 bg-light rounded-4 shadow h-100">
+        <i class="bi bi-truck display-4 text-primary mb-3"></i>
+        <h5 class="fw-semibold">Pan-India Reach</h5>
+        <p class="text-muted">We serve major metros to remote regions with dependable logistics.</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="p-4 bg-light rounded-4 shadow h-100">
+        <i class="bi bi-clock-history display-4 text-primary mb-3"></i>
+        <h5 class="fw-semibold">Timely Delivery</h5>
+        <p class="text-muted">Your goods, always on time—our tech-enabled tracking keeps you updated.</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="p-4 bg-light rounded-4 shadow h-100">
+        <i class="bi bi-shield-lock display-4 text-primary mb-3"></i>
+        <h5 class="fw-semibold">Safe & Insured</h5>
+        <p class="text-muted">We ensure cargo security and offer comprehensive insurance options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-primary text-white text-center py-5 mt-5">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Ready to Move With Us?</h2>
+    <p class="lead mb-4">Experience stress-free transportation—fast, safe, and reliable.</p>
+    <a href="{% url 'booking' %}" class="btn btn-light btn-lg rounded-pill px-4">Book a Truck</a>
+  </div>
+</div>
+{% endblock %}

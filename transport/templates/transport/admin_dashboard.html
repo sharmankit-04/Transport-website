@@ -1,0 +1,23 @@
+<!-- transport/templates/transport/admin_dashboard.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Bookings</h1>
+    <ul>
+        {% for booking in bookings %}
+        <li>{{ booking }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Trucks</h1>
+    <ul>
+        {% for truck in trucks %}
+        <li>{{ truck }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

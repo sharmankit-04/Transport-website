@@ -1,0 +1,196 @@
+{% extends 'transport/base.html' %}
+
+{% block title %}Delhi Bombay Roadlines | Reliable Transport Services{% endblock %}
+
+{% block content %}
+<!-- SEO Meta Tags -->
+<meta name="description" content="Fast and secure transport from Delhi to Bombay and across India. Book shipments with ease at Delhi Bombay Roadlines.">
+<meta name="keywords" content="Transport, Logistics, Delhi Bombay, Freight, Truck Booking, Cargo, Goods Carrier">
+<meta name="author" content="Delhi Bombay Roadlines">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Delhi Bombay Roadlines",
+  "url": "https://www.delhibombayroadlines.com",
+  "logo": "https://www.delhibombayroadlines.com/static/images/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-9999999999",
+    "contactType": "Customer Support",
+    "areaServed": "IN"
+  },
+  "sameAs": [
+    "https://www.facebook.com/delhibombayroadlines",
+    "https://www.instagram.com/delhibombayroadlines"
+  ]
+}
+</script>
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+  .hero {
+    height: 80vh;
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .features, .services, .testimonials {
+    padding: 40px 0;
+  }
+
+  .feature-card, .service-box, .testimonial-card {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover, .service-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-icon {
+    width: 60px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+    }
+
+    .feature-card, .service-box, .testimonial-card {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="hero" data-aos="fade-in">
+  <h1 class="display-4 fw-bold">Welcome to Delhi Bombay Roadlines</h1>
+  <p class="lead">Trusted transport solutions from Delhi to Bombay and across India.</p>
+  <a href="/booking/" class="btn btn-light mt-3 btn-lg">Book a Shipment</a>
+</section>
+
+<!-- Why Choose Us -->
+<section class="features container">
+  <h2 class="text-center mb-5" data-aos="fade-up">Why Choose Us?</h2>
+  <div class="row text-center">
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios/100/000000/fast-cart.png" alt="Fast Delivery" class="feature-icon">
+        <h4>Fast & Reliable</h4>
+        <p>Timely pickup and delivery across India with real-time updates.</p>
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios/100/000000/price-tag.png" alt="Affordable" class="feature-icon">
+        <h4>Affordable Pricing</h4>
+        <p>Best rates with uncompromised service and safety.</p>
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios/100/000000/customer-support.png" alt="Support" class="feature-icon">
+        <h4>24/7 Support</h4>
+        <p>We're always here for your logistics needs and queries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4" data-aos="fade-up">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="service-box p-4">
+          <h5>Full Truck Load (FTL)</h5>
+          <p>Dedicated truck services for large shipments, direct delivery.</p>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="service-box p-4">
+          <h5>Part Truck Load (PTL)</h5>
+          <p>Cost-effective option for shared cargo space and optimized logistics.</p>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="service-box p-4">
+          <h5>Warehousing</h5>
+          <p>Secure, organized warehousing solutions across major cities.</p>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="service-box p-4">
+          <h5>Real-Time Tracking</h5>
+          <p>Stay updated with our GPS-powered shipment tracking system.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials bg-primary text-white">
+  <div class="container">
+    <h2 class="text-center mb-4" data-aos="fade-up">What Our Clients Say</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="testimonial-card p-4 text-dark">
+          <p>“Prompt service, timely delivery. Highly dependable logistics.”</p>
+          <h6 class="mt-3">– Rakesh Sinha, Delhi</h6>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card p-4 text-dark">
+          <p>“Very professional and affordable. I trust them every time.”</p>
+          <h6 class="mt-3">– Meena Thakur, Mumbai</h6>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card p-4 text-dark">
+          <p>“Their tracking system gave me peace of mind. Great job!”</p>
+          <h6 class="mt-3">– Arvind Patel, Ahmedabad</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 text-center" data-aos="zoom-in">
+  <div class="container">
+    <h2 class="mb-3">Ready to Ship?</h2>
+    <p class="mb-4">Click below to book your shipment in a few easy steps.</p>
+    <a href="/booking/" class="btn btn-outline-primary btn-lg">Book a Truck</a>
+  </div>
+</section>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true });
+</script>
+{% endblock %}

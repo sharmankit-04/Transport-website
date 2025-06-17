@@ -1,0 +1,176 @@
+{% extends 'transport/base.html' %}
+
+{% block title %}Delhi Bombay Roadlines - Fast & Secure Transport{% endblock %}
+
+{% block content %}
+<!-- Hero Section with continuous animation -->
+<section class="hero" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100" data-aos-once="false">
+  <h1 class="display-4 fw-bold">Welcome to Delhi Bombay Roadlines</h1>
+  <p class="lead">India’s trusted goods transport solution from Delhi to Bombay & beyond.</p>
+  <a href="/booking/" class="btn btn-light mt-3 btn-lg">Book a Shipment</a>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4" data-aos="fade-up">Why Choose Us?</h2>
+    <div class="row text-center g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-truck fs-1 text-primary"></i>
+            <h5 class="card-title mt-3">Pan-India Coverage</h5>
+            <p class="card-text">From metros to remote areas, we deliver everywhere.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-clock fs-1 text-success"></i>
+            <h5 class="card-title mt-3">On-Time Delivery</h5>
+            <p class="card-text">We value your time and deliver exactly when promised.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-shield-lock fs-1 text-danger"></i>
+            <h5 class="card-title mt-3">Safety First</h5>
+            <p class="card-text">Your cargo is insured and handled with top safety protocols.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Our Key Features</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+        <div class="feature-card">
+          <img src="https://img.icons8.com/ios/100/000000/fast-cart.png" alt="Fast Delivery" />
+          <h4>Fast & Reliable Delivery</h4>
+          <p>We ensure timely pickup and delivery of your goods across major cities in India.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+        <div class="feature-card">
+          <img src="https://img.icons8.com/ios/100/000000/price-tag.png" alt="Affordable Rates" />
+          <h4>Affordable Rates</h4>
+          <p>Get the best prices without compromising on quality and safety.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+        <div class="feature-card">
+          <img src="https://img.icons8.com/ios/100/000000/customer-support.png" alt="Support" />
+          <h4>24/7 Customer Support</h4>
+          <p>We're here to help you any time of the day, any day of the week.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="bg-primary text-white py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4">What Our Customers Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="bg-white text-dark p-4 rounded shadow-sm">
+          <p>“Excellent service! My goods arrived on time and in perfect condition. Highly recommended.”</p>
+          <h6 class="mt-3">– Rakesh Sinha, Delhi</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white text-dark p-4 rounded shadow-sm">
+          <p>“Very professional team. Booking was easy, and tracking kept me updated throughout.”</p>
+          <h6 class="mt-3">– Meena Thakur, Mumbai</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white text-dark p-4 rounded shadow-sm">
+          <p>“Affordable pricing and quick support. They’re now our go-to logistics partner.”</p>
+          <h6 class="mt-3">– Arvind Patel, Ahmedabad</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Call to Action Section -->
+<section class="py-5 text-center" data-aos="zoom-in">
+  <div class="container">
+    <h2 class="mb-3">Need to Ship Something?</h2>
+    <p class="mb-4">Get started by booking your shipment in just a few clicks.</p>
+    <a href="/booking/" class="btn btn-outline-primary btn-lg">Book a Truck</a>
+    <!-- Add Track Shipment Button -->
+    <a href="{% url 'track_shipment' %}" class="btn btn-outline-info btn-lg mt-3">Track Your Shipment</a>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p class="mb-0">© 2025 Delhi Bombay Roadlines. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Delhi Bombay Roadlines is India's trusted goods transport solution. Offering safe, reliable, and affordable transport services from Delhi to Bombay & beyond." />
+<meta name="keywords" content="Delhi Bombay Roadlines, transport services, India logistics, goods transport, shipping, freight, delivery, pan India coverage, on-time delivery" />
+<meta name="author" content="Delhi Bombay Roadlines" />
+
+<!-- AOS Initialization and Custom Animation Settings -->
+<script>
+  AOS.init({
+    once: false,       // Ensure animations repeat every time the element comes into view
+    offset: 200,       // Trigger the animation when element is 200px from the viewport
+    delay: 100,        // Delay between each animation
+    duration: 800,     // Duration of the animation
+    easing: 'ease',    // Easing of the animation
+  });
+</script>
+
+<!-- Continuous Animation on Hero Section -->
+<style>
+  .hero {
+    height: 80vh;
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    animation: fadeInOut 5s infinite; /* Loop forever */
+  }
+
+  /* Continuous Fade-In/Out Effect */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+</style>
+
+{% endblock %}

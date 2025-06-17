@@ -1,0 +1,17 @@
+<!-- transport/templates/transport/tracking_result.html -->
+{% extends 'transport/base.html' %}
+
+{% block content %}
+  <div class="container py-5">
+    {% if shipment %}
+      <h3>Shipment Details</h3>
+      <p><strong>Tracking Number:</strong> {{ shipment.tracking_number }}</p>
+      <p><strong>Status:</strong> {{ shipment.status }}</p>
+      <p><strong>Current Location:</strong> {{ shipment.current_location }}</p>
+      <p><strong>Estimated Delivery Date:</strong> {{ shipment.estimated_delivery_date }}</p>
+      <p><strong>Last Update:</strong> {{ shipment.last_update }}</p>
+    {% elif error %}
+      <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+  </div>
+{% endblock %}

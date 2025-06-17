@@ -1,0 +1,133 @@
+{% extends 'transport/base.html' %}
+
+{% block title %}Booking - Delhi Bombay Roadlines{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4 text-center text-primary">Book Your Transport Service</h2>
+
+  <!-- Booking Form -->
+  <form method="post" novalidate id="bookingForm" class="shadow p-4 rounded bg-light">
+    {% csrf_token %}
+    
+    <div class="mb-3">
+      <label for="customer_name" class="form-label">Full Name</label>
+      <input type="text" class="form-control form-control-lg" id="customer_name" name="customer_name" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="contact_number" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control form-control-lg" id="contact_number" name="contact_number" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
+      <div class="form-text text-warning">Please enter a 10-digit phone number without country code.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="pickup_location" class="form-label">Pickup Location</label>
+      <select class="form-select form-select-lg" id="pickup_location" name="pickup_location" required>
+        <option value="" disabled selected>Select Pickup City</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Pune">Pune</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="delivery_location" class="form-label">Delivery Location</label>
+      <select class="form-select form-select-lg" id="delivery_location" name="delivery_location" required>
+        <option value="" disabled selected>Select Delivery City</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Pune">Pune</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="goods_type" class="form-label">Goods Type</label>
+      <input type="text" class="form-control form-control-lg" id="goods_type" name="goods_type" placeholder="Type of goods (e.g., Electronics, Furniture)" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="truck_type" class="form-label">Truck Type</label>
+      <select class="form-select form-select-lg" id="truck_type" name="truck_type" required>
+        <option value="" disabled selected>Select Truck Type</option>
+        <option value="Open Truck">Open Truck</option>
+        <option value="Container Truck">Container Truck</option>
+        <option value="Refrigerated Truck">Refrigerated Truck</option>
+        <option value="Tanker">Tanker</option>
+        <!-- Add more truck types as needed -->
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg w-100" id="submitBtn">Submit Booking</button>
+  </form>
+</div>
+
+<!-- Validation Popup Modal -->
+<div class="modal fade" id="validationModal" tabindex="-1" aria-labelledby="validationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="validationModalLabel">Validation Error</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Please enter a valid 10-digit phone number.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success Popup Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Booking Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Your booking has been successfully submitted. We will contact you shortly!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (for Modal) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Form Validation and Success Message Script -->
+<script>
+  document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    var phoneInput = document.getElementById('contact_number');
+    
+    // Validate phone number (check if it's exactly 10 digits)
+    if (phoneInput.value.length !== 10) {
+      event.preventDefault();  // Prevent form submission
+      var validationModal = new bootstrap.Modal(document.getElementById('validationModal'));
+      validationModal.show();  // Show the validation error modal
+    } else {
+      // If phone number is valid, allow form submission
+      // Form will be submitted to the server now (remove event.preventDefault)
+    }
+  });
+</script>
+
+{% endblock %}

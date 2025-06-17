@@ -1,0 +1,46 @@
+{% extends 'transport/base.html' %}
+
+{% block title %}Booking - Delhi Bombay Roadlines{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4 text-primary">Book a Transport Service</h2>
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required>
+      <div class="form-text text-warning">Enter a 10-digit phone number without country code.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="pickup_date" class="form-label">Pickup Date</label>
+      <input type="date" class="form-control" id="pickup_date" name="pickup_date" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="origin" class="form-label">Origin</label>
+      <input type="text" class="form-control" id="origin" name="origin" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="destination" class="form-label">Destination</label>
+      <input type="text" class="form-control" id="destination" name="destination" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="cargo_details" class="form-label">Cargo Details</label>
+      <textarea class="form-control" id="cargo_details" name="cargo_details" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Booking</button>
+  </form>
+</div>
+{% endblock %}
