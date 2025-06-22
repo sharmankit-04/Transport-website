@@ -8,7 +8,7 @@ A professional transport booking website built using **Django** and **PostgreSQL
 
 - 📦 **Online Shipment Booking** – Book transportation based on source, destination, vehicle type, weight, etc.
 - 📈 **Freight Price Prediction** – AI-based cost prediction using trained ML models.
-- ⏱️ **Delivery Time Estimation** (Upcoming)
+- ⏱️ **Delivery Time Estimation**
 - 💬 **AI Chatbot** (Planned) – For booking support and FAQs.
 - 📬 **Inquiry Form** – Submit queries and request customized quotes.
 - 🛠️ **Admin Dashboard** – Manage bookings, inquiries, and services through Django admin.
