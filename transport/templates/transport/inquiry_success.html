@@ -1,0 +1,13 @@
+{% extends 'transport/base.html' %}
+
+{% block title %}Inquiry Sent - Delhi Bombay Roadlines{% endblock %}
+
+{% block content %}
+<section class="container my-5">
+  <div class="alert alert-success text-center">
+    <h3>Thank you for your inquiry!</h3>
+    <p>We will get back to you soon.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary mt-3">Back to Home</a>
+  </div>
+</section>
+{% endblock %}

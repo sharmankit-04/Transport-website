@@ -1,0 +1,68 @@
+{% extends 'transport/base.html' %}
+{% block title %}Estimate Delivery - Delhi Bombay Roadlines{% endblock %}
+{% block content %}
+{% load static %}
+<section class="container my-5" style="max-width: 600px;">
+  <div class="card shadow-lg p-5 rounded-4 bg-light" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="mb-5 text-center fw-bold text-primary">Estimate Your Delivery Time</h2>
+    <form method="post" novalidate>
+      {% csrf_token %}
+      <div class="mb-4">
+        <label for="{{ form.pickup_location.id_for_label }}" class="form-label text-secondary fw-semibold small">Pickup Location</label>
+        {{ form.pickup_location }}
+      </div>
+      <div class="mb-4">
+        <label for="{{ form.delivery_location.id_for_label }}" class="form-label text-secondary fw-semibold small">Delivery Location</label>
+        {{ form.delivery_location }}
+      </div>
+      <div class="mb-4">
+        <label for="{{ form.goods_type.id_for_label }}" class="form-label text-secondary fw-semibold small">Goods Type (optional)</label>
+        {{ form.goods_type }}
+      </div>
+      <button type="submit" class="btn btn-gradient w-100 py-3 fw-bold shadow-sm text-white">
+        Get Estimate
+      </button>
+    </form>
+
+    {% if estimated_days %}
+    <div class="alert alert-info mt-5 text-center fs-5 rounded-3" data-aos="fade-in" data-aos-delay="500">
+      🚚 Estimated Delivery Time: <strong>{{ estimated_days }} day{{ estimated_days|pluralize }}</strong>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  .form-control-lg, .form-select-lg {
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .form-control-lg:focus, .form-select-lg:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+    outline: none;
+  }
+  .btn-gradient {
+    background: linear-gradient(90deg, #0d6efd, #00c6ff);
+    border: none;
+    border-radius: 12px;
+    transition: background 0.4s ease, box-shadow 0.3s ease;
+  }
+  .btn-gradient:hover, .btn-gradient:focus {
+    background: linear-gradient(90deg, #0847c5, #0096c7);
+    box-shadow: 0 6px 20px rgba(0, 198, 255, 0.6);
+    color: white !important;
+  }
+</style>
+
+<script>
+  AOS.init({
+    once: true,
+    offset: 150,
+    duration: 800,
+    easing: 'ease-in-out',
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,6 @@
+weight,distance,vehicle_type,price
+100,500,Truck,12000
+200,800,MiniTruck,16000
+150,700,Truck,14000
+250,1000,Container,20000
+300,600,Truck,18000

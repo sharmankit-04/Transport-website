@@ -1,0 +1,23 @@
+# locations.py (ya directly views.py me define kar sakta hai)
+LOCATIONS = [
+    ('Delhi', 'Delhi'),
+    ('Mumbai', 'Mumbai'),
+    ('Bangalore', 'Bangalore'),
+    ('Hyderabad', 'Hyderabad'),
+    ('Chennai', 'Chennai'),
+    ('Kolkata', 'Kolkata'),
+    ('Pune', 'Pune'),
+    ('Ahmedabad', 'Ahmedabad'),
+    ('Jaipur', 'Jaipur'),
+    ('Surat', 'Surat'),
+    ('Nagpur', 'Nagpur'),
+    ('Indore', 'Indore'),
+    ('Bhopal', 'Bhopal'),
+    ('Lucknow', 'Lucknow'),
+    ('Patna', 'Patna'),
+    ('Kanpur', 'Kanpur'),
+    ('Ranchi', 'Ranchi'),
+    ('Chandigarh', 'Chandigarh'),
+    ('Guwahati', 'Guwahati'),
+    ('Vadodara', 'Vadodara'),
+]

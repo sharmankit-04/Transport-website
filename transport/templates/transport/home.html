@@ -3,14 +3,14 @@
 {% block title %}Delhi Bombay Roadlines - Fast & Secure Transport{% endblock %}
 
 {% block content %}
-<!-- Hero Section with continuous animation -->
-<section class="hero" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100" data-aos-once="false">
+<!-- Hero Section -->
+<section class="hero" data-aos="fade-in" data-aos-duration="2000">
   <h1 class="display-4 fw-bold">Welcome to Delhi Bombay Roadlines</h1>
   <p class="lead">India’s trusted goods transport solution from Delhi to Bombay & beyond.</p>
   <a href="/booking/" class="btn btn-light mt-3 btn-lg">Book a Shipment</a>
 </section>
 
-<!-- Why Choose Us Section -->
+<!-- Why Choose Us -->
 <section class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-4" data-aos="fade-up">Why Choose Us?</h2>
@@ -76,8 +76,7 @@
   </div>
 </section>
 
-
-<!-- Testimonials Section -->
+<!-- Testimonials -->
 <section class="bg-primary text-white py-5">
   <div class="container" data-aos="fade-up">
     <h2 class="text-center mb-4">What Our Customers Say</h2>
@@ -104,42 +103,51 @@
   </div>
 </section>
 
-
 <!-- Call to Action Section -->
 <section class="py-5 text-center" data-aos="zoom-in">
   <div class="container">
     <h2 class="mb-3">Need to Ship Something?</h2>
     <p class="mb-4">Get started by booking your shipment in just a few clicks.</p>
     <a href="/booking/" class="btn btn-outline-primary btn-lg">Book a Truck</a>
-    <!-- Add Track Shipment Button -->
     <a href="{% url 'track_shipment' %}" class="btn btn-outline-info btn-lg mt-3">Track Your Shipment</a>
   </div>
 </section>
 
-<!-- Footer Section -->
+<!-- ✅ New Quick Tools Section -->
+<section class="py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-3">Quick Tools</h2>
+    <p class="mb-4">Need an estimate or have a question? Use our tools below.</p>
+    <a href="{% url 'predict_price' %}" class="btn btn-primary btn-lg me-3">Estimate Freight Price</a>
+    <a href="{% url 'estimate_delivery' %}" class="btn btn-success btn-lg me-3">Estimate Delivery Time</a>
+    <a href="{% url 'inquiry' %}" class="btn btn-outline-secondary btn-lg">Send Us an Inquiry</a>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer class="bg-dark text-white py-4">
   <div class="container text-center">
     <p class="mb-0">© 2025 Delhi Bombay Roadlines. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- SEO Meta Tags -->
+<!-- SEO Tags -->
 <meta name="description" content="Delhi Bombay Roadlines is India's trusted goods transport solution. Offering safe, reliable, and affordable transport services from Delhi to Bombay & beyond." />
-<meta name="keywords" content="Delhi Bombay Roadlines, transport services, India logistics, goods transport, shipping, freight, delivery, pan India coverage, on-time delivery" />
+<meta name="keywords" content="Delhi Bombay Roadlines, transport services, logistics, freight, delivery, pan India coverage, on-time delivery" />
 <meta name="author" content="Delhi Bombay Roadlines" />
 
-<!-- AOS Initialization and Custom Animation Settings -->
+<!-- AOS -->
 <script>
   AOS.init({
-    once: false,       // Ensure animations repeat every time the element comes into view
-    offset: 200,       // Trigger the animation when element is 200px from the viewport
-    delay: 100,        // Delay between each animation
-    duration: 800,     // Duration of the animation
-    easing: 'ease',    // Easing of the animation
+    once: false,
+    offset: 200,
+    delay: 100,
+    duration: 800,
+    easing: 'ease',
   });
 </script>
 
-<!-- Continuous Animation on Hero Section -->
+<!-- Animation -->
 <style>
   .hero {
     height: 80vh;
@@ -153,10 +161,9 @@
     border-radius: 20px;
     margin-bottom: 40px;
     padding: 0 20px;
-    animation: fadeInOut 5s infinite; /* Loop forever */
+    animation: fadeInOut 5s infinite;
   }
 
-  /* Continuous Fade-In/Out Effect */
   @keyframes fadeInOut {
     0% {
       opacity: 0;
@@ -172,5 +179,4 @@
     }
   }
 </style>
-
 {% endblock %}

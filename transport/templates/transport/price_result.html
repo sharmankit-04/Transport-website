@@ -1,0 +1,16 @@
+{% extends 'transport/base.html' %}
+{% block title %}Freight Price Result{% endblock %}
+
+{% block content %}
+<section class="container my-5">
+  <div class="card shadow-lg text-center p-5 mx-auto" style="max-width: 600px;">
+    <h2 class="mb-4 text-success">Estimated Freight Price</h2>
+    <p class="display-5 fw-bold">₹ {{ price }}</p>
+    <p class="text-muted">This is an approximate cost based on your inputs.</p>
+    <div class="d-flex justify-content-between mt-4">
+      <a href="{% url 'predict_price' %}" class="btn btn-outline-primary">Estimate Again</a>
+      <a href="{% url 'home' %}" class="btn btn-outline-secondary">Go to Home</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

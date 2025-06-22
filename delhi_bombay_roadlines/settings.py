@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'transport',  # Your custom app
+    'widget_tweaks',
 ]
 
 # Middleware
