@@ -1,34 +1,38 @@
-# 🚛 Delhi Bombay Roadlines – Transport Booking Website
+# Delhi Bombay Roadlines – Transport Booking & Freight Estimation Website 🚛
 
-Welcome to **Delhi Bombay Roadlines**, a professional web-based transport booking system for intercity truck services. This project is built using **Django** and **PostgreSQL**, with a modern responsive frontend.
+A professional transport booking website built using **Django** and **PostgreSQL** that enables users to book shipments, predict freight prices using AI, and submit service inquiries. The website is designed with a clean, responsive UI and scroll-based animations for a smooth user experience.
 
 ---
 
-## 📌 Features
+## 🔥 Features
 
-- 📝 Online Truck Booking Form
-- 👤 Client Login and Booking Tracking
-- 🛠️ Admin Dashboard for Booking Management
-- 📱 Mobile-Friendly Responsive Design
-- 🎨 Smooth Scroll Animations and Transitions
-- 🔍 SEO Optimized with Meta Tags & Structured Data
+- 📦 **Online Shipment Booking** – Book transportation based on source, destination, vehicle type, weight, etc.
+- 📈 **Freight Price Prediction** – AI-based cost prediction using trained ML models.
+- ⏱️ **Delivery Time Estimation** (Upcoming)
+- 💬 **AI Chatbot** (Planned) – For booking support and FAQs.
+- 📬 **Inquiry Form** – Submit queries and request customized quotes.
+- 🛠️ **Admin Dashboard** – Manage bookings, inquiries, and services through Django admin.
+- 🌐 **SEO-Optimized Pages** – Improved visibility on search engines.
+- 🎨 **Smooth UI/UX** – Clean layout, scroll animations, responsive on all devices.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer       | Technology Used              |
-|-------------|-------------------------------|
-| **Frontend**| HTML, CSS, Bootstrap, JavaScript |
-| **Backend** | Django (Python)               |
-| **Database**| PostgreSQL                    |
-| **Tools**   | Git, GitHub, VS Code          |
+| Layer        | Technology              |
+|--------------|--------------------------|
+| Backend      | Django (Python)          |
+| Frontend     | HTML5, CSS3, JavaScript  |
+| Database     | PostgreSQL               |
+| AI/ML        | Scikit-learn             |
+| Hosting (Optional) | Render / Heroku     |
+| Tools        | Git, GitHub, VS Code     |
 
 ---
 
-## 🚀 How to Run This Project
+## 🚀 Getting Started (for Developers)
 
-1. **Clone the Repository:**
+1. Clone the repo:
 
 ```bash
 git clone https://github.com/your-username/delhi-bombay-roadlines.git
